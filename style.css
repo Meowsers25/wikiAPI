@@ -1,4 +1,27 @@
 .well a {
     font-size: 20px;
-    
+}
+
+.form-control {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10 px;
+}
+
+#button {
+    display: block;
+    margin: 0 auto;
+}
+
+.input {
+    padding-bottom: 10px;
+}
+
+#well {
+    padding-top: 20px;
+}
+
+p .small {
+    font-size: 5px;
 }

@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $("#button").click(function() {
+    $("#button").click(function () {
         var submission = $("#search").val();
         var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + submission + "&format=json&callback=?";
 
@@ -8,7 +8,7 @@ $(document).ready(function() {
             url: url,
             type: "GET",
             dataType: "json", //needed to add this
-            success: function(response){
+            success: function (response) {
                 console.log(response[1].length);
                 // console.log(response[1][0]);
                 // console.log(response[2][0]);
@@ -25,20 +25,14 @@ $(document).ready(function() {
                     html += "<li class='list-item'><a style='text-decoration:none; color:inherit;' href=" + anchor[i] + ">" + "<em>" + keyWords[i] + "</em>" + "</a>" + "<br>" + description[i] + "</li>";
                 });
                 html += "</ul>";
-                
+
                 $("#results").html(html);
                 $("#search").val('');
 
             },
-            error: function(error){
+            error: function (error) {
                 console.log('error');
             }
         });
-
-
-
-
-
-
     });
 });
